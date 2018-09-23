@@ -1,0 +1,1916 @@
+<html lang="en" class="js touch dom-ready mdl-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>소개 - Material 디자인</title>
+
+    <meta itemprop="name" property="og:title" name="twitter:title" content="Introduction">
+    <meta itemprop="description" property="og:description" name="twitter:description" content="Material Design is a system for building bold, beautiful, and consistent digital products.">
+    <meta itemprop="image" property="og:image" name="twitter:image" content="https://material.io/design/https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ppvC09e6GqrM_1rM2dSMSIkd4nw2K7ZO%2Fcustomization-thumbnail-2x1.png">
+    <meta itemprop="url" property="og:url" name="twitter:url" content="https://material.io/design/introduction/index.html">
+    <meta property="og:site_name" content="Material Design">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        *:not(i) {
+            font-family: 'Noto Sans KR', sans-serif !important;
+        }
+        .animatable {
+        opacity: 0;
+        position: relative;
+        top: 16px;         transition: opacity 235ms cubic-bezier(.4,0,.2,1),
+                    top 500ms cubic-bezier(.4,0,.2,1);
+      }
+    </style>
+    <link href="https://material.io/design/static/m2/css/main.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons"
+        rel="stylesheet">
+    <link rel="preload" href="https://material.io/design/static/m2/js/main.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js" as="script">
+    <link rel="preload" href="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js" as="script">
+    <script type="text/javascript" charset="utf-8" async="" src="https://www.google.com/insights/consumersurveys/gk/static/hats-integration-release.js"></script>
+    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=material.io" as="script">
+    <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=material.io"></script>
+</head>
+
+<body class="header-show page--article left-rail" data-comp="Global " data-slug-id="introduction" data-spec-alias="mio-design"
+    data-comp-id="comp_1" style="--scrollbar-width:17px;">
+
+
+
+    <header class="header js-header" data-comp="Header" data-comp-id="comp_2">
+        <button class="header__hamburger header__button" aria-expanded="false" data-comp="Button" data-comp-id="comp_3">
+            <i class="material-icons header__hamburger-icon" title="Toggle Navigation">menu</i>
+        </button>
+
+
+        <a href="/design" class="brand-lockup ">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material 디자인</span>
+        </a>
+        <nav class="header__nav" role="navigation">
+            <ul class="header__nav-list header__nav-list--selected">
+                <li class="header__nav-item  js-header-item">
+                    <a href="/design" class="header__nav-link">
+                        홈
+                        <span class="header__nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="header__nav-item  header__nav-item--active js-header-item" aria-current="true">
+                    <a href="/design" class="header__nav-link">
+                        디자인
+                        <span class="header__nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="header__nav-item  js-header-item">
+                    <a href="/develop" class="header__nav-link">
+                        개발
+                        <span class="header__nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="header__nav-item  js-header-item">
+                    <a href="/tools" class="header__nav-link">
+                        도구
+                        <span class="header__nav-indicator"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <form id="search-form" class="search-form js-search" data-comp="SearchForm" data-props-searchform="{&quot;basePath&quot;: &quot;/&quot;, &quot;ajax&quot;: false, &quot;showOnLoad&quot;: false}"
+            data-comp-id="comp_4">
+            <button class="search-form__back js-search-back " type="button">
+                <i class="material-icons">arrow_back</i>
+            </button>
+
+            <input id="search-query" class="search-form__input js-search-input" name="q" type="text" title="query"
+                placeholder="Search" autocomplete="off" aria-label="Press Enter to search.">
+        </form>
+
+        <button class="header__search header__button js-toggle-search ">
+            <div class="icons-container mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:19.2px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:6px; --mdc-ripple-top:6px;">
+                <i class="material-icons header__spyglass" aria-label="Search">search</i>
+                <i class="material-icons header__search-close" aria-label="Close">close</i>
+            </div>
+        </button>
+    </header>
+
+    <nav aria-label="Breadcrumbs" class="breadcrumbs" data-comp="Breadcrumbs" data-comp-id="comp_5">
+        <button class="breadcrumbs__hamburger" aria-expanded="false" data-comp="Button" data-props-button="{&quot;eventName&quot;: &quot;togglenav&quot;}"
+            data-comp-id="comp_6">
+            <i class="material-icons" title="Toggle Navigation">menu</i>
+        </button>
+
+
+        <a href="/design" class="brand-lockup ">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material 디자인</span>
+        </a>
+        <ol class="container container--large breadcrumbs__list anim-appear">
+            <li class="breadcrumbs__crumb">
+                <a class="breadcrumbs__link  " href="https://material.io/design/design">디자인</a>
+            </li>
+            <li class="breadcrumbs__crumb">
+                <a class="breadcrumbs__link  js-breadcrumb-link" href="https://material.io/design/introduction/introduction.html">소개</a>
+            </li>
+            <li class="breadcrumbs__crumb breadcrumbs__chapter" data-current="원칙">
+                <a class="breadcrumbs__link  js-breadcrumb-link js-breadcrumb-hash" href="#principles" data-section-id="원칙">원칙</a>
+            </li>
+        </ol>
+    </nav>
+
+    <nav class="side-nav initialized" data-comp="SideNav" role="navigation" aria-hidden="true" data-comp-id="comp_5">
+
+        <a href="/design" class="brand-lockup">
+            <i class="brand-lockup__logo brand-lockup__logo--animate"></i>
+            <span class="brand-lockup__title brand-lockup__title--animate">Material 디자인</span>
+        </a>
+
+
+        <span class="side-nav__section-title">Material 시스템</span>
+
+        <ul class="side-nav__menu side-nav__menu--sections">
+
+            <li class="side-nav__menu-item">
+                <a class="side-nav__link js-submenu-link mdc-ripple-surface active mdc-ripple-upgraded" href="../introduction"
+                    style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    소개
+                </a>
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav1"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    Material 연구
+                </button>
+                <div class="side-nav__wrapper" id="_nav1">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -354px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="/material-design-korean/design/material-studies/about-our-material-studies.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                우리의 Material 연구에 대해서
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/basil.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Basil
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/crane.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Crane
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/fortnightly.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Fortnightly
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/owl.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Owl
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/rally.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Rally
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/reply.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Reply
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-studies/shrine.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                Shrine
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+        </ul> <span class="side-nav__section-title">Material의 기초</span>
+
+        <ul class="side-nav__menu side-nav__menu--sections">
+
+            <li class="side-nav__menu-item">
+                <a class="side-nav__link js-submenu-link mdc-ripple-surface mdc-ripple-upgraded" href="https://material.io/design/foundation-overview"
+                    style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    개요
+                </a>
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav3"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    환경
+                </button>
+                <div class="side-nav__wrapper" id="_nav3">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/environment/surfaces.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                바탕
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/environment/elevation.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                높이
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/environment/light-shadows.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                조명과 그림자
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav4"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    레이아웃
+                </button>
+                <div class="side-nav__wrapper" id="_nav4">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -228px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/layout/understanding-layout.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                레이아웃의 이해
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/layout/responsive-layout-grid.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                반응형 레이아웃
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/layout/spacing-methods.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                의미있는 빈 공간
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/layout/component-behavior.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                컴포넌트의 움직임
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/layout/density.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                밀도
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav5"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    네비게이션
+                </button>
+                <div class="side-nav__wrapper" id="_nav5">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/navigation/understanding-navigation.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                네비게이션의 이해
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/navigation/navigation-transitions.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                화면 전환 애니메이션
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/navigation/search.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                검색
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav6"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    색 테마
+                </button>
+                <div class="side-nav__wrapper" id="_nav6">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/color/the-color-system.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                색 테마 시스템
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/color/applying-color-to-ui.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                UI에 색 테마를 적용하기
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/color/color-usage.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                색을 올바르게 사용하기
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/color/text-legibility.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                색과 가독성
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav7"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    글꼴
+                </button>
+                <div class="side-nav__wrapper" id="_nav7">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/typography/the-type-system.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                글꼴 시스템
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/typography/understanding-typography.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                글꼴에 대한 이해
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/typography/language-support.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                언어 지원
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav8"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    아이콘
+                </button>
+                <div class="side-nav__wrapper" id="_nav8">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/iconography/product-icons.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                아이콘 제작
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/iconography/system-icons.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                시스템 아이콘
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/iconography/animated-icons.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                아이콘 애니메이션
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav9"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    도형
+                </button>
+                <div class="side-nav__wrapper" id="_nav9">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/shape/about-shape.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                도형에 대해
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/shape/shape-hierarchy.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                도형의 계층구조
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/shape/shape-as-expression.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                표현으로써의 도형
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/shape/shape-motion.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                도형 애니메이션
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav10"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    애니메이션
+                </button>
+                <div class="side-nav__wrapper" id="_nav10">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -186px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/motion/understanding-motion.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                애니메이션의 이해
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/motion/speed.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                속도
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/motion/choreography.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                움직임
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/motion/customization.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                사용자화
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav11"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    상호작용
+                </button>
+                <div class="side-nav__wrapper" id="_nav11">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -144px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/interaction/gestures.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                제스쳐
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/interaction/selection.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                선택
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/interaction/states.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                상태
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav12"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    의사소통
+                </button>
+                <div class="side-nav__wrapper" id="_nav12">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -414px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/confirmation-acknowledgement.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+                                확인과 정보
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/data-formats.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                자료 형식
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/empty-states.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                빈 상태
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/help-feedback.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                문의와 고객센터
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/imagery.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                이미지
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/launch-screen.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                실행화면
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/onboarding.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                튜토리얼/초기설정
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/writing.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                단어 선택
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/communication/offline-states.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                오프라인 상태
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+        </ul> <span class="side-nav__section-title">Material 가이드라인</span>
+
+        <ul class="side-nav__menu side-nav__menu--sections">
+
+            <li class="side-nav__menu-item">
+                <a class="side-nav__link js-submenu-link mdc-ripple-surface mdc-ripple-upgraded" href="https://material.io/design/guidelines-overview"
+                    style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    개요
+                </a>
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav14"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    Material 테마
+                </button>
+                <div class="side-nav__wrapper" id="_nav14">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -102px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-theming/overview.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                개요
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/material-theming/implementing-your-theme.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                테마를 적용하기
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav15"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    컴포넌트
+                </button>
+                <div class="side-nav__wrapper" id="_nav15">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -1086px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/app-bars-bottom.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                앱바: 하단
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/app-bars-top.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                앱바: 상부
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/backdrop.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                백드롭
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/banners.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                배너
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/bottom-navigation.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                하단 네비게이션
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/buttons.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                버튼
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/buttons-floating-action-button.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+                                버튼: FAB(Floating Action Button)
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/cards.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                카드
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/chips.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                칩
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/data-tables.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                데이터 표
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/dialogs.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                대화상자
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/dividers.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                구분선
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/image-lists.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                이미지 리스트
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/lists.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                리스트
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/menus.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                메뉴
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/navigation-drawer.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                네비게이션 서랍(Drawer)
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/progress-indicators.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                진행표시바
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/selection-controls.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                선택
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/sheets-bottom.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                시트: 하단
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/sheets-side.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                시트: 옆
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/sliders.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                슬라이더
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/snackbars.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                스낵바
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/tabs.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                탭
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/text-fields.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                텍스트 입력
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/components/tooltips.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                툴팁
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav16"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    사용성
+                </button>
+                <div class="side-nav__wrapper" id="_nav16">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -102px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/usability/accessibility.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                접근성
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/usability/bidirectionality.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                언어에 대한 텍스트 정렬
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+
+            <li class="side-nav__menu-item">
+                <button class="side-nav__toggle mdc-ripple-surface js-submenu-toggle mdc-ripple-upgraded" aria-controls="_nav17"
+                    aria-expanded="false" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                    안드로이드 가이드라인
+                </button>
+                <div class="side-nav__wrapper" id="_nav17">
+                    <ul class="side-nav__submenu" data-menu-state="closed" aria-hidden="true" style="margin-top: -582px;">
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-bars.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                바
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-fingerprint.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                지문
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-haptics.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                진동
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-icons.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                아이콘
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-navigating-between-apps.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.77343;">
+                                앱 사이의 연결
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-notifications.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                알림
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-permissions.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                권한
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-settings.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                설정
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-split-screen.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                화면분할
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-swipe-to-refresh.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                당겨서 새로고침
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-text-selection-toolbar.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                문자선택 툴바
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/android-widget.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                위젯
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a class="side-nav__link mdc-ripple-surface js-submenu-link mdc-ripple-upgraded" href="https://material.io/design/platform-guidance/cross-platform-adaptation.html"
+                                tabindex="-1" style="--mdc-ripple-fg-size:157.2px; --mdc-ripple-fg-scale:1.75156;">
+                                크로스플랫폼
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </li>
+
+        </ul>
+    </nav>
+    <main class="main" role="main">
+
+        <article class="article" data-comp="Waypoints" data-comp-id="comp_8">
+            <div class="article__intro container container--large js-waypoints-trigger-initial anim-appear">
+                <div class="article__intro-text">
+                    <h1 class="article__title animatable js-anim-trigger anim-appear">
+
+                        소개
+
+                        <div class="article-controls">
+
+                        </div>
+                    </h1>
+
+
+                    <div class="article__intro-text animatable js-anim-trigger anim-appear">
+                        <div>
+                            <h2>Matetial 디자인은 클래식한 느낌과 과학기술의 혁신이 공존하는 시각 언어입니다.</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="article__body animatable js-breadcrumb-toggle js-anim-trigger anim-appear">
+                <section id="principles" class="container container--large js-waypoints-trigger article__section anim-appear"
+                    data-section-title="Principles" aria-label="Principles">
+
+                    <div class="article__copy">
+                        <div>
+                            <div aria-hidden="true" class="keywords hidden">Material 디자인, 개요</div>
+                            <div class="collapsible" data-comp="Collapsible" data-comp-id="comp_9">
+                                <div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Goals Section"
+                                        class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button>
+                                    <h1 class="collapsible__heading">목표</h1>
+                                </div>
+                                <div class="collapsible__wrap js-collapsible-wrap">
+                                    <div class="collapsible__peek js-collapsible-peek">
+                                        <p>Create a visual language that synthesizes the classic principles of good
+                                            design with the innovation and possibility of technology and science.
+                                            Develop a single underlying...</p><span class="button button--underline">Read
+                                            More</span>
+                                    </div>
+                                    <div class="collapsible__content js-collapsible-content">
+                                        <figure class="inline-media inline-media--image rich-media" data-maxwidth="1520px">
+                                            <div class="frame media-placeholder lazy-wrapper" style="padding-top: 50.0%;">
+                                                <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                    data-aspect-ratio="50.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11RPVO0iDN9ow1pFdG1IGEueFqSTktCtG%2Fintro-illo-intro.png"
+                                                    src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11RPVO0iDN9ow1pFdG1IGEueFqSTktCtG%2Fintro-illo-intro.png">
+                                            </div>
+                                        </figure>
+                                        <div class="col-list">
+                                            <section class="module-module-module col-3 h2-spacing">
+                                                <div class="module">
+                                                    <h2>창조</h2>
+                                                    <p>클래식한 느낌과 과학기술의 혁신, 가능성이 공존하는 시간 언어를 창조해보세요</p>
+                                                </div>
+                                                <div class="module">
+                                                    <h2>통합</h2>
+                                                    <p>Material 디자인으로 모든 플랫폼, 모든 기기, 모든 입력장치에서 한결같은 경험을 유저에게 선사하세요.</p>
+                                                </div>
+                                                <div class="module">
+                                                    <h2>사용자화</h2>
+                                                    <p>혁신과 브랜드를 나타나기 위해 유연한 기초를 바탕으로 Material 디자인을 확장해보세요.</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapsible" data-comp="Collapsible" data-comp-id="comp_10">
+                                <div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Principles Section"
+                                        class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button>
+                                    <h1 class="collapsible__heading">원칙</h1>
+                                </div>
+                                <div class="collapsible__wrap js-collapsible-wrap">
+                                    <div class="collapsible__peek js-collapsible-peek">
+                                        <p>Material Design is inspired by the physical world and its textures,
+                                            including how they reflect light and cast shadows. Material surfaces
+                                            reimagine the mediums of...</p><span class="button button--underline">Read
+                                            More</span>
+                                    </div>
+                                    <div class="collapsible__content js-collapsible-content">
+                                        <figure class="inline-media inline-media--image rich-media" data-maxwidth="3167px">
+                                            <div class="frame media-placeholder lazy-wrapper" style="padding-top: 49.9842121882%;">
+                                                <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                    data-aspect-ratio="49.9842121882%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Hfurrx3NHOuac_WreNWxG-2qdKjliIx_%2Fintro-illo-metaphor.png"
+                                                    src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1Hfurrx3NHOuac_WreNWxG-2qdKjliIx_%2Fintro-illo-metaphor.png">
+                                            </div>
+                                        </figure>
+                                        <h2>Material은 은유적입니다</h2>
+                                        <p>Material 디자인은 현실세계의 반사, 조명, 그림자 그리고 질감에 대해
+                                            영감을 얻어 만들어졌습니다. Material은 종이와 잉크를 바탕으로 합니다.</p>
+                                        <div class="col-list rich-media">
+                                            <section class="module-module col-2">
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="1542px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11HOtmhrzSWV-83DL97G2w3nJHd5WIyps%2Fintro-illo-bold.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F11HOtmhrzSWV-83DL97G2w3nJHd5WIyps%2Fintro-illo-bold.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>굵고 의도적인 그래픽</h2>
+                                                    Material 디자인은 사용자를 몰입시킬 수 있는 컴포넌트(그리드, 공간, 축척, 색상 및 이미지)와 의미에 초점을
+                                                    맞추었습니다.
+                                                    </p>
+                                                </div>
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="1542px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kVVLIES2HDnnmqXgAvglbAK8a-oVEEh0%2Fintro-illo-motion.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1kVVLIES2HDnnmqXgAvglbAK8a-oVEEh0%2Fintro-illo-motion.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>움직임은 뜻을 담고있습니다</h2>
+                                                    <p>
+                                                        모션은 적절한 피드백과 일관성있는 화면 전환으로 사용자가 페이지에
+                                                        집중할 수 있게 해줍니다. 요소가 화면에 나타날때 환경을 변화하고 서로
+                                                        상호작용하며 새롭게 재구성됩니다.
+                                                    </p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="col-list rich-media">
+                                            <section class="module-module col-2">
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="1542px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xrPDANfO5bV3fs6QenIZzVaNn_ad1ydq%2Fintro-illo-flexible.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1xrPDANfO5bV3fs6QenIZzVaNn_ad1ydq%2Fintro-illo-flexible.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>유연한 기초</h2>
+                                                    <p>
+                                                        Material 디자인은 자신만의 브랜드 표현이 가능하도록 설계되었습니다.
+                                                        컴포넌트, 플러그인, 그리고 디자인 요소들은 사용자화된 코드를 기반으로
+                                                        끊김없이 적용됩니다.
+                                                    </p>
+                                                </div>
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="1542px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1C5b2IcDg1nbo8mUx9M-xcQT50eaKr03I%2Fintro-illo-cross-platform.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1C5b2IcDg1nbo8mUx9M-xcQT50eaKr03I%2Fintro-illo-cross-platform.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>크로스플랫폼</h2>
+                                                    <p>
+                                                        Material 디자인은 Android, iOS, Flutter, Web에 아울러서 동일하게
+                                                        유지되는 공유를 바탕으로 동일한 UI를 제공합니다.
+                                                    </p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapsible" data-comp="Collapsible" data-comp-id="comp_11">
+                                <div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Getting around Section"
+                                        class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button>
+                                    <h1 class="collapsible__heading">둘러보기</h1>
+                                </div>
+                                <div class="collapsible__wrap js-collapsible-wrap">
+                                    <div class="collapsible__peek js-collapsible-peek">
+                                        <p>Material 가이드는 아름답고 빠른 제품을 만들 수 있도록 도와줍니다. Material을
+                                                사용자화하고 협엽하기위해 새 도구로 빌드하고 디자인해보세요. Material에서 영감을
+                                                얻으세...</p><span class="button button--underline">더 읽어보기</span>
+                                    </div>
+                                    <div class="collapsible__content js-collapsible-content">
+                                        <p>Material 가이드는 아름답고 빠른 제품을 만들 수 있도록 도와줍니다. Material을
+                                            사용자화하고 협엽하기위해 새 도구로 빌드하고 디자인해보세요. Material에서 영감을
+                                            얻으세요. 그리고 당신의 프로젝트에 개성과 정체성을 부여하세요.
+                                        </p>
+                                        <p>아래의 세가지 문서를 확인해보세요: </p>
+                                        <div class="col-list rich-media">
+                                            <section class="module-module-module col-3">
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="772px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ZermvFYkJ-tUmPa9QL5CiWMC0SFrx67D%2Fintro-illo-system.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1ZermvFYkJ-tUmPa9QL5CiWMC0SFrx67D%2Fintro-illo-system.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>Material 시스템</h2>
+                                                    <p>확장되고 강화된 디자인 시스템은 설계와 개발의 워크플로우를
+                                                        개선하기 위해 Material Tools 및 컴포넌트와 통합되었습니다.
+                                                    </p>
+                                                </div>
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="771px">
+                                                        <div class="bordered frame media-placeholder lazy-wrapper"
+                                                            style="padding-top: 100.129701686%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.129701686%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1IZHFTcO1_beIhcV65KsiQWYKo6g1U8aG%2Fintro-illo-foundation.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1IZHFTcO1_beIhcV65KsiQWYKo6g1U8aG%2Fintro-illo-foundation.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>Material 기초</h2>
+                                                    <p>
+                                                        Material 디자인을 뒷받침해주는 원리와 이론을 배우면서 Material
+                                                        디자인 구조를 사용해 제품을 디자인하고 전략화합니다..
+                                                    </p>
+                                                </div>
+                                                <div class="module">
+                                                    <figure class="inline-media inline-media--image" data-maxwidth="771px">
+                                                        <div class="frame media-placeholder lazy-wrapper" style="padding-top: 100.0%;">
+                                                            <img alt="" class="inline-image animatable lazy-wrapper__image js-lazy-image anim-appear"
+                                                                data-aspect-ratio="100.0%" data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F10hopQ2-3NS3F2-IQEXiqJBVB7CVFEjaN%2Fintro-illo-guidance.png"
+                                                                src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F10hopQ2-3NS3F2-IQEXiqJBVB7CVFEjaN%2Fintro-illo-guidance.png">
+                                                        </div>
+                                                    </figure>
+                                                    <h2>Material 가이드라인</h2>
+                                                    <p>
+                                                        디자인부터 코드까지 제품 전반에 걸쳐 당신만의 Material 테마를
+                                                        체계적으로 사용자화하고 배포합니다.
+                                                    </p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <p>기존의 문서는 <a href="https://material.io/archive/guidelines/" rel="noopener"
+                                                target="_blank">여기서 볼 수 있습니다.</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapsible" data-comp="Collapsible" data-comp-id="comp_12">
+                                <div class="collapsible__brief js-collapsible-brief"><button aria-label="Collapse Updates Section"
+                                        class="collapsible__toggle-button toggle-button js-collabsible-arrow" role="button"></button>
+                                    <h1 class="collapsible__heading">월간 업데이트</h1>
+                                </div>
+                                <div class="collapsible__wrap js-collapsible-wrap">
+                                    <div class="collapsible__peek js-collapsible-peek">
+                                        <p>Material is designed to evolve over time. Starting in May 2018, we’ll
+                                            deliver on a monthly release cadence to increase the expressive
+                                            capabilities of the...</p><span class="button button--underline">Read More</span>
+                                    </div>
+                                    <div class="collapsible__content js-collapsible-content">
+                                            <p>
+                                                Material은 시간의 흐름에 맞게 진화하도록 설계되었습니다. 2018년 5월부터
+                                                매달 Material의 표현력을 증가시킬 수 있는 업데이트를 합니다.
+                                            </p>
+                                        <p>매달 변경점을 이메일로 받으시려면<a href="https://services.google.com/fb/forms/google-design-updates/"
+                                                rel="noopener" target="_blank">
+                                                여기서 등록하시고</a> 최근 변경점은 <a href="https://github.com/material-components/material-components/blob/develop/ROADMAP.md/"
+                                                rel="noopener" target="_blank">
+                                                Github에서 볼 수 있습니다.</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="container container--large">
+
+                <h2>추천항목
+                    <div class="article-controls">
+
+                    </div>
+                </h2>
+
+                <div class="suggested-articles">
+                    <div>
+                        <a aria-label="About" class="suggested-articles__item animatable js-anim-scroll " href="https://material.io/design/material-studies/about-our-material-studies.html">
+                            <div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded"
+                                data-mdc-ripple-image="" style="background-image: url(&quot;https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1lcjc6Wxg0VIZekCCAhoGRD5sp_0fT8A-%2Fcustomization-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+                            </div>
+                            <h3 class="suggested-articles__item-title eyebrow">Material 연구</h3>
+                            <h4 class="suggested-articles__item-subtitle">우리의 Material 연구에 대해서</h4>
+                        </a>
+                        <a aria-label="Elevation" class="suggested-articles__item animatable js-anim-scroll " href="https://material.io/design/environment/elevation.html">
+                            <div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded"
+                                data-mdc-ripple-image="" style="background-image: url(&quot;https://material.io/design/assets/1fOdPazWBot482oimvKKkBDEDzSuDlVBs/environment-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+                            </div>
+                            <h3 class="suggested-articles__item-title eyebrow">환경</h3>
+                            <h4 class="suggested-articles__item-subtitle">높이</h4>
+                        </a><br>
+
+                        <a aria-label="About Shape" class="suggested-articles__item animatable js-anim-scroll " href="https://material.io/design/shape/about-shape.html">
+                            <div class="suggested-articles__item-img mdc-ripple-surface mdc-ripple-upgraded"
+                                data-mdc-ripple-image="" style="background-image: url(&quot;https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1lRunRe11OP7A3u6tc4Mh8c4N16hK0Vtt%2Fshapes-thumbnail-2x1.png&quot;); --mdc-ripple-fg-size:136.003px; --mdc-ripple-fg-scale:1.93689;">
+                            </div>
+                            <h3 class="suggested-articles__item-title eyebrow">도형</h3>
+                            <h4 class="suggested-articles__item-subtitle">도형에 대해</h4>
+                        </a></div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container container--jumbo">
+            <div class="footer-block footer-block--about">
+                <a class="footer-block__logo " href="/design">
+                    <img class="footer-block__material-logo" src="https://material.io/design/static/m2/images/material_logo.svg"
+                        alt="Material Design">
+                </a>
+                <div class="footer-block__content">
+                    <p class="footer-block__description">Material is an adaptable system of guidelines, components, and
+                        tools that support the best practices of user interface design. Backed by open-source code,
+                        Material streamlines collaboration between designers and developers, and helps teams quickly
+                        build beautiful products.</p>
+                    <ul class="footer-block__social-nav">
+                        <li class="footer-block__social-nav-item"> <a href="https://www.github.com/material-components"
+                                target="_blank" rel="noopener" class="footer-block__social-nav-link " aria-label="Find us on GitHub">GitHub</a>
+                        </li>
+                        <li class="footer-block__social-nav-item"> <a href="https://www.twitter.com/materialdesign"
+                                target="_blank" rel="noopener" class="footer-block__social-nav-link " aria-label="Find us on Twitter">Twitter</a>
+                        </li>
+                        <li class="footer-block__social-nav-item"> <a href="https://www.youtube.com/googledesign"
+                                target="_blank" rel="noopener" class="footer-block__social-nav-link " aria-label="Find us on YouTube">YouTube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-block footer-block--legal">
+                <a class="footer-block__logo " href="https://www.google.com">
+                    <img class="footer-block__google-logo" src="https://material.io/design/static/m2/images/google_logo.svg"
+                        alt="Google">
+                </a>
+                <div class="footer-block__content">
+                    <ul class="footer-block__legal-nav">
+                        <li class="footer-block__legal-nav-item"> <a href="https://policies.google.com/privacy" target="_blank"
+                                rel="noopener" class="footer-block__legal-nav-link " aria-label="Privacy Policy">Privacy
+                                Policy</a>
+                        </li>
+                        <li class="footer-block__legal-nav-item"> <a href="https://policies.google.com/terms" target="_blank"
+                                rel="noopener" class="footer-block__legal-nav-link " aria-label="Terms of Service">Terms
+                                of Service</a>
+                        </li>
+                        <li class="footer-block__legal-nav-item"><a href="javascript:void(0)" class="footer-block__legal-nav-link"
+                                onclick="try{userfeedback.api.startFeedback({'productId': '1027542', 'bucket': 'material_spec', 'locale': 'en', 'allowNonLoggedInFeedback': true});return false;}catch(e){}">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="ui-mask js-ui-mask"></div>
+    <div class="lightbox js-lightbox" data-comp="Lightbox" aria-hidden="true" role="dialog" aria-labelledby="sr-lightbox-title"
+        data-comp-id="comp_13">
+        <h2 class="screenreader-only sr-lightbox-title" tabindex="0">
+            Explore how Shrine, a retail app, uses Material Design.
+        </h2>
+
+        <header class="lightbox__header">
+            <div class="lightbox__header-title">
+                <span class="lightbox__button js-lightbox-close" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Close&quot;, &quot;direction&quot;: &quot;bottom&quot;}"
+                    data-comp-id="comp_14">
+                    <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        data-mdc-ripple-is-unbounded="" tabindex="0" style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
+                        close
+                    </i>
+                    <div class="tooltip js-tooltip-bottom">
+                        Close</div>
+                </span>
+                <h2 class="lightbox__title js-lightbox-title"></h2>
+            </div>
+
+            <div class="lightbox__actions">
+                <button type="button" name="button" class="lightbox-redlines-toggle js-redline-sidebar-toggle"
+                    data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;View Specs&quot;, &quot;direction&quot;: &quot;bottom&quot;}"
+                    data-comp-id="comp_15">
+                    <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:NaN; --mdc-ripple-left:0px; --mdc-ripple-top:0px;">flip</i>
+                    <div class="tooltip js-tooltip-bottom">
+                        View Specs</div>
+                </button>
+
+                <button type="button" name="button" class="lightbox__button js-share" data-comp="Tooltip"
+                    data-props-tooltip="{&quot;tip&quot;: &quot;Share&quot;, &quot;direction&quot;: &quot;bottom&quot;}"
+                    data-comp-id="comp_16">
+                    <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">share</i>
+                    <div class="tooltip js-tooltip-bottom">
+                        Share</div>
+                </button>
+
+            </div>
+        </header>
+
+        <div class="lightbox__template js-zoom-wrapper">
+            <div class="lightbox__content js-lightbox-content">
+                <img class="ui-loader" src="https://material.io/design/static/m2/images/loader.svg" alt="loader"
+                    aria-hidden="true"> </div>
+            <div class="redline-sidebar js-lightbox-sidebar-container" data-comp="RedlineSidebar" data-comp-id="comp_17">
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Image only&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_18">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-image js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="image" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons"></i>
+                        <span class="redline-sidebar__label-text">Image only</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Image only</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Measurements&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_19">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-measurements js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="measurements" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">format_shapes</i>
+                        <span class="redline-sidebar__label-text">Measurements</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Measurements</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Text&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_20">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-text js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="text" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">format_size</i>
+                        <span class="redline-sidebar__label-text">Text</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Text</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Color&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_21">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-colors js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="colors" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">palette</i>
+                        <span class="redline-sidebar__label-text">Color</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Color</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Shape and Elevation&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_22">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-shapes js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="shapes" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">rounded_corner</i>
+                        <span class="redline-sidebar__label-text">Shape and Elevation</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Shape and Elevation</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Components&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_23">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-components js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="components" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">category</i>
+                        <span class="redline-sidebar__label-text">Components</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Components</div>
+                </div>
+                <div class="redline-sidebar__button-wrapper" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Notes&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_24">
+                    <button type="button" class="redline-sidebar__item mdc-ripple-surface js-notes js-redline-sidebar-item mdc-ripple-upgraded"
+                        value="notes" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                        <i class="material-icons">notes</i>
+                        <span class="redline-sidebar__label-text">Notes</span>
+                    </button>
+                    <div class="tooltip js-tooltip-left">
+                        Notes</div>
+                </div>
+                <div class="redline-sidebar__toggles js-redline-layer-toggles">
+                    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--dimensions">
+                        <input type="checkbox" id="dimensions" class="mdc-checkbox__native-control js-redline-layer-toggle">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                    <label for="dimensions">Dimensions</label>
+                    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--padding">
+                        <input type="checkbox" id="padding" class="mdc-checkbox__native-control js-redline-layer-toggle">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                    <label for="padding">Padding</label>
+                    <div class="mdc-checkbox redline-sidebar__toggle redline-sidebar__toggle--typography">
+                        <input type="checkbox" id="typography" class="mdc-checkbox__native-control js-redline-layer-toggle">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                    <label for="typography">Text baseline</label>
+                </div>
+            </div>
+            <nav class="carousel__nav">
+                <button class="carousel__button carousel__button--prev mdc-ripple-surface js-carousel-prev mdc-ripple-upgraded"
+                    data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Previous&quot;, &quot;direction&quot;: &quot;right&quot;}"
+                    data-comp-id="comp_25" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                    <i class="material-icons">chevron_left</i>
+                    <div class="tooltip js-tooltip-right">
+                        Previous</div>
+                </button>
+
+                <button class="carousel__button carousel__button--next mdc-ripple-surface js-carousel-next mdc-ripple-upgraded"
+                    data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Next&quot;, &quot;direction&quot;: &quot;left&quot;}"
+                    data-comp-id="comp_26" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">
+                    <i class="material-icons">chevron_right</i>
+                    <div class="tooltip js-tooltip-left">
+                        Next</div>
+                </button>
+            </nav>
+            <div class="zoom-buttons" data-comp="Zoom" data-comp-id="comp_27">
+                <div class="zoom-buttons__wrapper">
+
+                    <button class="mdc-button-zoom js-zoom-out" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Zoom out&quot;, &quot;direction&quot;: &quot;top&quot;}"
+                        data-comp-id="comp_28">
+                        <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">remove</i>
+                        <div class="tooltip js-tooltip-top">
+                            Zoom out</div>
+                    </button>
+                    <button class="mdc-button-zoom js-zoom-reset" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Reset&quot;, &quot;direction&quot;: &quot;top&quot;}"
+                        data-comp-id="comp_29">
+                        <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">search</i>
+                        <div class="tooltip js-tooltip-top">
+                            Reset</div>
+                    </button>
+                    <button class="mdc-button-zoom js-zoom-in" data-comp="Tooltip" data-props-tooltip="{&quot;tip&quot;: &quot;Zoom in&quot;, &quot;direction&quot;: &quot;top&quot;}"
+                        data-comp-id="comp_30">
+                        <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:2.60817;">add</i>
+                        <div class="tooltip js-tooltip-top">
+                            Zoom in</div>
+                    </button>
+
+                    <div class="zoom-buttons__extras">
+                        <button class="mdc-button-zoom js-colorpicker-toggle" data-comp="Tooltip Colorpicker"
+                            data-props-tooltip="{&quot;tip&quot;: &quot;Color picker&quot;, &quot;direction&quot;: &quot;top&quot;}"
+                            data-comp-id="comp_31 comp_32">
+                            <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">colorize</i>
+                            <div class="tooltip js-tooltip-top">
+                                Color picker</div>
+                        </button>
+                        <button class="mdc-button-zoom js-ruler-toggle" data-comp="Tooltip Ruler" data-props-tooltip="{&quot;tip&quot;: &quot;Ruler&quot;, &quot;direction&quot;: &quot;top&quot;}"
+                            data-comp-id="comp_33 comp_34">
+                            <i class="material-icons mdc-ripple-surface mdc-ripple-upgraded" style="--mdc-ripple-fg-size:0px; --mdc-ripple-fg-scale:Infinity;">straighten</i>
+                            <div class="tooltip js-tooltip-top">
+                                Ruler</div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <aside class="mdc-dialog" role="alertdialog" aria-labelledby="mdc-dialog-label" aria-describedby="mdc-dialog-description"
+            data-comp="Share" data-comp-id="comp_35">
+            <div class="mdc-dialog__surface">
+                <header class="mdc-dialog__header">
+                    <h2 id="mdc-dialog-label" class="mdc-dialog__header__title">Share</h2>
+                    <button type="button" class="mdc-dialog-share-close js-dialog-close">
+                        <i class="material-icons material-icons--padded mdc-ripple-surface mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                            data-mdc-ripple-is-unbounded="" style="--mdc-ripple-fg-size:19.2px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:6px; --mdc-ripple-top:6px;">close</i>
+                    </button>
+                </header>
+                <section id="mdc-dialog-description" class="mdc-dialog__body">
+                    <input type="text" readonly="" class="mdc-dialog-share-url js-share-url">
+                    <button type="button" class="mdc-button mdc-ripple-surface mdc-dialog-copy js-dialog-copy mdc-ripple-upgraded"
+                        style="--mdc-ripple-fg-size:30.72px; --mdc-ripple-fg-scale:2.23777;">Copy</button>
+                </section>
+            </div>
+            <div class="mdc-dialog__backdrop"></div>
+        </aside>
+    </div>
+    <div class="mdc-snackbar snackbar-wrapper" data-comp="Snackbar" aria-live="assertive" aria-atomic="true"
+        aria-hidden="true" data-comp-id="comp_36">
+        <div class="mdc-snackbar__text"></div>
+        <div class="mdc-snackbar__action-wrapper">
+            <button type="button" class="mdc-button mdc-snackbar__action-button" aria-hidden="true"></button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/external_hosted/prettify/prettify_compiled.js"></script>
+    <script type="text/javascript" id="" src="//www.google.com/insights/consumersurveys/async_survey?site=znr647dh46pklceehuqef2fsua"></script>
+    <script src="https://www.gstatic.com/external_hosted/waypoints/waypoints.min.js"></script>
+    <script src="https://material.io/design/static/m2/js/main.min.js"></script>
+    <script src="https://support.google.com/inapp/api.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHRPF8"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</body>
+<style>
+    #__dic_layer__ img {
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+        display: inline;
+        opacity: 1;
+    }
+
+    #__dic_menulayer__ img {
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+        display: inline;
+        opacity: 1;
+    }
+
+    #__dic_waitlayer__ img {
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+        display: inline;
+        opacity: 1;
+    }
+
+    #__dic_layer__ a {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+        display: inline;
+        background-color: transparent
+    }
+
+    #__dic_layer__ a:link {
+        color: #0860A8;
+    }
+
+    #__dic_layer__ a:visited {
+        color: #0860A8;
+    }
+
+    #__dic_layer__ a:active {
+        color: #0860A8;
+    }
+
+    #__dic_layer__ a:hover {
+        color: #0860A8;
+        text-decoration: underline;
+    }
+
+    #__dic_layer__ div {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+        width: auto;
+        height: auto;
+    }
+
+    #__dic_menulayer__ a {
+        display: inline;
+        background-color: transparent
+    }
+
+    #__dic_layer__ tr {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__dic_layer__ td {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__table_source_open__ {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0px;
+        text-shadow: none;
+    }
+
+    #__dic_source_data__ div {
+        width: 99%;
+    }
+
+    #__dic_layer__ p {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__dic_layer__ b {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__dic_layer__ ul {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+        width: auto;
+        height: auto;
+        padding: 0px 0px 0px 4px;
+        margin: 0px;
+        list-style-type: disc;
+    }
+
+    #__dic_layer__ li {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+        width: auto;
+        height: auto;
+        padding: 0px 0px 0xp 8px;
+        margin: 0px;
+        list-style-type: decimal;
+        list-style-position: outside;
+    }
+
+    #__dic_layer__ span {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__dic_layer__ option {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    #__dic_layer__ select {
+        font-size: 10pt;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        text-shadow: none;
+        background-color: white;
+        width: 145px;
+        height: 20px;
+        display: inline-block;
+        border: 1px solid transparent;
+        padding: 0px;
+        margin: 2px 0px 2px 0px;
+    }
+</style>
+
+</html>
